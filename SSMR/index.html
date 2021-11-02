@@ -1,6 +1,7 @@
 <?php
 include ('../SSMR/inc/sendEmail.php');
-if (include ('../SSMR/inc/sendEmail.php')==true echo 'ok'; else echo'error';)
+if(!@include("sendEmail.php")) 
+	throw new Exception("Failed to include 'script.php'");
 ?>
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
